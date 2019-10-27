@@ -10,11 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_10_26_015947) do
 
   create_table "servicios", force: :cascade do |t|
     t.string "nombre"
     t.text "descripcion"
+
+ActiveRecord::Schema.define(version: 2019_10_27_001753) do
+
+  create_table "clientes", force: :cascade do |t|
+    t.string "nombre"
+    t.string "direccion"
+    t.integer "telefono"
+    t.string "servicio_requerido"
+    t.text "descripcion_del_servicio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tecnicos", force: :cascade do |t|
+    t.string "nombre"
+    t.integer "telefono"
+    t.string "profesion_u_oficio"
+    t.text "servicios_ofrecidos"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
