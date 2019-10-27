@@ -10,6 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+ActiveRecord::Schema.define(version: 2019_10_26_015947) do
+
+  create_table "servicios", force: :cascade do |t|
+    t.string "nombre"
+    t.text "descripcion"
+
 ActiveRecord::Schema.define(version: 2019_10_27_001753) do
 
   create_table "clientes", force: :cascade do |t|
