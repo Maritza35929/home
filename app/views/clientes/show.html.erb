@@ -25,10 +25,5 @@
   <%= @cliente.descripcion_del_servicio %>
 </p>
 
-<p>
-  <strong>Foto:</strong>
-  <%= link_to @cliente.foto.filename, @cliente.foto if @cliente.foto.attached? %>
-</p>
-
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |
 <%= link_to 'Back', clientes_path %>
